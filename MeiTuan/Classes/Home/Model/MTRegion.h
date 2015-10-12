@@ -1,0 +1,16 @@
+//
+//  MTRegion.h
+//  MeiTuan
+//
+//  Created by 金顺度 on 15/10/10.
+//  Copyright © 2015年 金顺度. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface MTRegion : NSObject
+/** 区域的名称 */
+@property (nonatomic,copy)NSString *name;
+/** 子区域 */
+@property (nonatomic,strong)NSArray *subregions;
+@end
