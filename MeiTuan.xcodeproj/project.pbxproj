@@ -52,6 +52,9 @@
 		A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EBF0201BCB8E3B00715AD3 /* MTRegionViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0251BCB91FC00715AD3 /* MTSorts.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF0241BCB91FC00715AD3 /* MTSorts.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0291BCB96DC00715AD3 /* MTSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF0281BCB96DC00715AD3 /* MTSortViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9EBF06F1BCBDAEA00715AD3 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF06B1BCBDAEA00715AD3 /* DPAPI.m */; settings = {ASSET_TAGS = (); }; };
+		A9EBF0701BCBDAEA00715AD3 /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF06E1BCBDAEA00715AD3 /* DPRequest.m */; settings = {ASSET_TAGS = (); }; };
+		A9EBF0721BCBE02900715AD3 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF0711BCBE02900715AD3 /* Foundation+Log.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +160,12 @@
 		A9EBF0241BCB91FC00715AD3 /* MTSorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSorts.m; sourceTree = "<group>"; };
 		A9EBF0271BCB96DC00715AD3 /* MTSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSortViewController.h; sourceTree = "<group>"; };
 		A9EBF0281BCB96DC00715AD3 /* MTSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSortViewController.m; sourceTree = "<group>"; };
+		A9EBF06A1BCBDAEA00715AD3 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		A9EBF06B1BCBDAEA00715AD3 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		A9EBF06C1BCBDAEA00715AD3 /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
+		A9EBF06D1BCBDAEA00715AD3 /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
+		A9EBF06E1BCBDAEA00715AD3 /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
+		A9EBF0711BCBE02900715AD3 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +340,7 @@
 		A9BAE5E71BC7FC4A00649A2D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A9EBF0711BCBE02900715AD3 /* Foundation+Log.m */,
 				A9BAE67F1BC90CF000649A2D /* UIView+AutoLayout.h */,
 				A9BAE6801BC90CF000649A2D /* UIView+AutoLayout.m */,
 				A9BAE5E81BC7FC4A00649A2D /* UIBarButtonItem+Extension.h */,
@@ -353,6 +363,7 @@
 		A9BAE5EF1BC7FC4A00649A2D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A9EBF0691BCBDAEA00715AD3 /* dianpingapi */,
 				A9BAE6341BC89F1000649A2D /* MJExtension */,
 			);
 			path = Lib;
@@ -417,6 +428,18 @@
 				A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		A9EBF0691BCBDAEA00715AD3 /* dianpingapi */ = {
+			isa = PBXGroup;
+			children = (
+				A9EBF06A1BCBDAEA00715AD3 /* DPAPI.h */,
+				A9EBF06B1BCBDAEA00715AD3 /* DPAPI.m */,
+				A9EBF06C1BCBDAEA00715AD3 /* DPConstants.h */,
+				A9EBF06D1BCBDAEA00715AD3 /* DPRequest.h */,
+				A9EBF06E1BCBDAEA00715AD3 /* DPRequest.m */,
+			);
+			path = dianpingapi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +599,7 @@
 				A9BAE65A1BC89F1000649A2D /* MJMethod.m in Sources */,
 				A9BAE6621BC8B7B400649A2D /* MTHomeDropdownMainCell.m in Sources */,
 				A9BAE6581BC89F1000649A2D /* MJIvar.m in Sources */,
+				A9EBF06F1BCBDAEA00715AD3 /* DPAPI.m in Sources */,
 				A9BAE5FE1BC7FC4A00649A2D /* MTConst.m in Sources */,
 				A9BAE5F61BC7FC4A00649A2D /* MTHomeViewController.m in Sources */,
 				A9BAE67E1BC90B6400649A2D /* MTCitySearchResultViewController.m in Sources */,
@@ -586,6 +610,8 @@
 				A9BAE5FB1BC7FC4A00649A2D /* MTNavigationController.m in Sources */,
 				A9BAE6561BC89F1000649A2D /* MJConst.m in Sources */,
 				A9BAE6781BC8E70E00649A2D /* MTRegion.m in Sources */,
+				A9EBF0721BCBE02900715AD3 /* Foundation+Log.m in Sources */,
+				A9EBF0701BCBDAEA00715AD3 /* DPRequest.m in Sources */,
 				A9BAE61B1BC89CC600649A2D /* MTCategory.m in Sources */,
 				A9BAE6751BC8E61100649A2D /* MTCity.m in Sources */,
 				A9BAE67B1BC8ED5A00649A2D /* MTCityGroups.m in Sources */,
