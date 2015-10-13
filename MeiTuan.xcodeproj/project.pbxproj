@@ -75,6 +75,13 @@
 		A9E491B81BCCB2A20007C841 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491AE1BCCB2A20007C841 /* UIScrollView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
 		A9E491B91BCCB2A20007C841 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491B01BCCB2A20007C841 /* UIScrollView+MJRefresh.m */; settings = {ASSET_TAGS = (); }; };
 		A9E491BA1BCCB2A20007C841 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491B21BCCB2A20007C841 /* UIView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491C61BCCD7960007C841 /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491BD1BCCD7960007C841 /* AwesomeMenu.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491C71BCCD7960007C841 /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491BF1BCCD7960007C841 /* AwesomeMenuItem.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491C81BCCD7960007C841 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491C21BCCD7960007C841 /* MBProgressHUD+MJ.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491C91BCCD7960007C841 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9E491C31BCCD7960007C841 /* MBProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
+		A9E491CA1BCCD7960007C841 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491C51BCCD7960007C841 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491D51BCCF3FA0007C841 /* MTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491D41BCCF3FA0007C841 /* MTSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491D81BCCF9670007C841 /* MTDealsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491D71BCCF9670007C841 /* MTDealsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0211BCB8E3B00715AD3 /* MTRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01F1BCB8E3B00715AD3 /* MTRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EBF0201BCB8E3B00715AD3 /* MTRegionViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -235,6 +242,19 @@
 		A9E491B01BCCB2A20007C841 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		A9E491B11BCCB2A20007C841 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		A9E491B21BCCB2A20007C841 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		A9E491BC1BCCD7960007C841 /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		A9E491BD1BCCD7960007C841 /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		A9E491BE1BCCD7960007C841 /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		A9E491BF1BCCD7960007C841 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		A9E491C11BCCD7960007C841 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		A9E491C21BCCD7960007C841 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		A9E491C31BCCD7960007C841 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		A9E491C41BCCD7960007C841 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A9E491C51BCCD7960007C841 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A9E491D31BCCF3FA0007C841 /* MTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSearchViewController.h; sourceTree = "<group>"; };
+		A9E491D41BCCF3FA0007C841 /* MTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSearchViewController.m; sourceTree = "<group>"; };
+		A9E491D61BCCF9670007C841 /* MTDealsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDealsViewController.h; sourceTree = "<group>"; };
+		A9E491D71BCCF9670007C841 /* MTDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDealsViewController.m; sourceTree = "<group>"; };
 		A9EBF01B1BCB5E9400715AD3 /* MTMetaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMetaTool.h; sourceTree = "<group>"; };
 		A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMetaTool.m; sourceTree = "<group>"; };
 		A9EBF01E1BCB8E3B00715AD3 /* MTRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRegionViewController.h; sourceTree = "<group>"; };
@@ -338,6 +358,7 @@
 		A9BAE5DC1BC7FC4A00649A2D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9E491CB1BCCEFCF0007C841 /* Search */,
 				A9BAE5DD1BC7FC4A00649A2D /* Home */,
 				A9BAE5E61BC7FC4A00649A2D /* Main */,
 			);
@@ -347,9 +368,9 @@
 		A9BAE5DD1BC7FC4A00649A2D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A9BAE5DE1BC7FC4A00649A2D /* Controller */,
 				A9EBF01A1BCB5E7600715AD3 /* Tool */,
 				A9BAE5E11BC7FC4A00649A2D /* Model */,
-				A9BAE5DE1BC7FC4A00649A2D /* Controller */,
 				A9BAE5E21BC7FC4A00649A2D /* View */,
 			);
 			path = Home;
@@ -447,6 +468,8 @@
 			children = (
 				A9BAE5ED1BC7FC4A00649A2D /* MTNavigationController.h */,
 				A9BAE5EE1BC7FC4A00649A2D /* MTNavigationController.m */,
+				A9E491D61BCCF9670007C841 /* MTDealsViewController.h */,
+				A9E491D71BCCF9670007C841 /* MTDealsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -454,6 +477,8 @@
 		A9BAE5EF1BC7FC4A00649A2D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A9E491BB1BCCD7960007C841 /* AwesomeMenu */,
+				A9E491C01BCCD7960007C841 /* MBProgressHUD */,
 				A9E491A21BCCB2A20007C841 /* MJRefresh */,
 				A9E4916C1BCC98E90007C841 /* SDWebImage */,
 				A9EBF0691BCBDAEA00715AD3 /* dianpingapi */,
@@ -575,6 +600,46 @@
 				A9E491B21BCCB2A20007C841 /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		A9E491BB1BCCD7960007C841 /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491BC1BCCD7960007C841 /* AwesomeMenu.h */,
+				A9E491BD1BCCD7960007C841 /* AwesomeMenu.m */,
+				A9E491BE1BCCD7960007C841 /* AwesomeMenuItem.h */,
+				A9E491BF1BCCD7960007C841 /* AwesomeMenuItem.m */,
+			);
+			path = AwesomeMenu;
+			sourceTree = "<group>";
+		};
+		A9E491C01BCCD7960007C841 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491C11BCCD7960007C841 /* MBProgressHUD+MJ.h */,
+				A9E491C21BCCD7960007C841 /* MBProgressHUD+MJ.m */,
+				A9E491C31BCCD7960007C841 /* MBProgressHUD.bundle */,
+				A9E491C41BCCD7960007C841 /* MBProgressHUD.h */,
+				A9E491C51BCCD7960007C841 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		A9E491CB1BCCEFCF0007C841 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491CC1BCCEFF30007C841 /* Controller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A9E491CC1BCCEFF30007C841 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491D31BCCF3FA0007C841 /* MTSearchViewController.h */,
+				A9E491D41BCCF3FA0007C841 /* MTSearchViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A9EBF01A1BCB5E7600715AD3 /* Tool */ = {
@@ -707,6 +772,7 @@
 				A9BAE6151BC89B2900649A2D /* categories.plist in Resources */,
 				A9BAE5F81BC7FC4A00649A2D /* MTHomeNavItem.xib in Resources */,
 				A9BAE6181BC89B2900649A2D /* sorts.plist in Resources */,
+				A9E491C91BCCD7960007C841 /* MBProgressHUD.bundle in Resources */,
 				A9BAE6031BC7FD0900649A2D /* MTHomeDropDown.xib in Resources */,
 				A9BAE6161BC89B2900649A2D /* cities.plist in Resources */,
 				A9E491B31BCCB2A20007C841 /* MJRefresh.bundle in Resources */,
@@ -749,8 +815,10 @@
 				A9E4918F1BCC98E90007C841 /* NSData+ImageContentType.m in Sources */,
 				A9BAE5FC1BC7FC4A00649A2D /* AppDelegate.m in Sources */,
 				A9BAE6551BC89F1000649A2D /* MJArgument.m in Sources */,
+				A9E491CA1BCCD7960007C841 /* MBProgressHUD.m in Sources */,
 				A9BAE6811BC90CF000649A2D /* UIView+AutoLayout.m in Sources */,
 				A9EBF0251BCB91FC00715AD3 /* MTSorts.m in Sources */,
+				A9E491C61BCCD7960007C841 /* AwesomeMenu.m in Sources */,
 				A9A6121E1BCC8DFB003284A2 /* MTDeal.m in Sources */,
 				A9BAE6651BC8B7CA00649A2D /* MTHomeDropdownSubCell.m in Sources */,
 				A9E491911BCC98E90007C841 /* SDWebImageCompat.m in Sources */,
@@ -759,6 +827,7 @@
 				A9E491B61BCCB2A20007C841 /* MJRefreshFooterView.m in Sources */,
 				A9E491901BCC98E90007C841 /* SDImageCache.m in Sources */,
 				A9BAE65C1BC89F1000649A2D /* MJTypeEncoding.m in Sources */,
+				A9E491D81BCCF9670007C841 /* MTDealsViewController.m in Sources */,
 				A9E491B51BCCB2A20007C841 /* MJRefreshConst.m in Sources */,
 				A9E491921BCC98E90007C841 /* SDWebImageDecoder.m in Sources */,
 				A9BAE6061BC802F500649A2D /* MTCategoryViewController.m in Sources */,
@@ -772,6 +841,8 @@
 				A9BAE6711BC8E24500649A2D /* MTCityViewController.m in Sources */,
 				A9E4919A1BCC98E90007C841 /* UIImage+WebP.m in Sources */,
 				A9BAE65A1BC89F1000649A2D /* MJMethod.m in Sources */,
+				A9E491D51BCCF3FA0007C841 /* MTSearchViewController.m in Sources */,
+				A9E491C71BCCD7960007C841 /* AwesomeMenuItem.m in Sources */,
 				A9E491B91BCCB2A20007C841 /* UIScrollView+MJRefresh.m in Sources */,
 				A9BAE6621BC8B7B400649A2D /* MTHomeDropdownMainCell.m in Sources */,
 				A9BAE6581BC89F1000649A2D /* MJIvar.m in Sources */,
@@ -795,6 +866,7 @@
 				A9E491A11BCCA4AB0007C841 /* MTCenterLineLabel.m in Sources */,
 				A9E491941BCC98E90007C841 /* SDWebImageDownloaderOperation.m in Sources */,
 				A9EBF0701BCBDAEA00715AD3 /* DPRequest.m in Sources */,
+				A9E491C81BCCD7960007C841 /* MBProgressHUD+MJ.m in Sources */,
 				A9BAE61B1BC89CC600649A2D /* MTCategory.m in Sources */,
 				A9E4919C1BCC98E90007C841 /* UIImageView+WebCache.m in Sources */,
 				A9BAE6751BC8E61100649A2D /* MTCity.m in Sources */,
@@ -923,7 +995,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeiTuan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mine.MeiTuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -936,7 +1008,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MeiTuan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mine.MeiTuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
