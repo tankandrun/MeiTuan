@@ -21,6 +21,10 @@
 #import "MTCategory.h"
 #import "MTSortViewController.h"
 #import "DPAPI.h"
+#import "MTDeal.h"
+#import "MJExtension.h"
+#import "MTDealCell.h"
+#import "MJRefresh.h"
 @interface MTHomeViewController ()<DPRequestDelegate>
 /** 分类item */
 @property (nonatomic,weak)UIBarButtonItem *categoryItem;
@@ -44,13 +48,28 @@
 @property (nonatomic,strong)UIPopoverController *regionPopover;
 /** 排序popover */
 @property (nonatomic,strong)UIPopoverController *sortPopover;
+
+/** 所有团购数据*/
+@property (nonatomic,strong)NSMutableArray *deals;
+
+/** 记录当前页码 */
+@property (nonatomic,assign)int currentPage;
+/** 保存最后一个请求 */
+@property (nonatomic,weak)DPRequest *lastRequest;
 @end
 
 @implementation MTHomeViewController
-
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"deal";
+- (NSMutableArray *)deals {
+    if (!_deals) {
+        self.deals = [[NSMutableArray alloc]init];
+    }
+    return _deals;
+}
 - (instancetype)init {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+    //cell的大小
+    layout.itemSize = CGSizeMake(305, 305);
     return [self initWithCollectionViewLayout:layout];
 }
 - (void)viewDidLoad {
@@ -58,8 +77,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     //设置背景色
     self.collectionView.backgroundColor = MTGlobalBg;
-    
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //Register cell classes
+    [self.collectionView  registerNib:[UINib nibWithNibName:@"MTDealCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     //监听分类改变
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:MTCategoryDidChangedNotification object:nil];
     //监听城市改变
@@ -72,9 +91,25 @@ static NSString * const reuseIdentifier = @"Cell";
     //设置导航栏内容
     [self setupLeftNav];
     [self setupRightNav];
+    
+    //添加上拉加载
+    [self.collectionView addFooterWithTarget:self action:@selector(loadMoreDeals)];
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+/**
+ *  当屏幕旋转，控制器view的尺寸发生改变调用
+ */
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    //根据屏幕宽度设置列数
+    int cols = size.width == 1024 ? 3 : 2;
+    //根据列数计算内边距
+    CGFloat inset = (size.width - cols*layout.itemSize.width)/(cols+1);
+    layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset);//总的collectionView的外边距
+    //设置每个cell竖直方向上的间距
+    layout.minimumLineSpacing = inset;
 }
 #pragma mark - 监听通知
 - (void)cityDidChange:(NSNotification *)notification {
@@ -139,7 +174,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self loadNewDeals];
 }
 #pragma mark - 跟服务器交互
-- (void)loadNewDeals {
+- (void)loadDeals {
     DPAPI *api = [[DPAPI alloc]init];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     //城市
@@ -158,10 +193,34 @@ static NSString * const reuseIdentifier = @"Cell";
     if (self.selectedRegionName) {
         params[@"region"] = self.selectedRegionName;
     }
-    [api requestWithURL:@"v1/deal/find_deals" params:params delegate:self];
+    //页码
+    params[@"page"] = @(self.currentPage);
+    self.lastRequest = [api requestWithURL:@"v1/deal/find_deals" params:params delegate:self];
 }
+- (void)loadNewDeals {
+    self.currentPage = 1;
+    [self loadDeals];
+}
+- (void)loadMoreDeals {
+    self.currentPage++;
+    [self loadDeals];
+}
+
 - (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
-    MTLog(@"请求成功--%@",result);
+    if (request != self.lastRequest) {
+        return;
+    }
+    //1.取出团购的字典数组
+    NSArray *newDeals = [MTDeal objectArrayWithKeyValuesArray:result[@"deals"]];
+    //加载第一页数据
+    if (self.currentPage == 1) {
+        [self.deals removeAllObjects];//清除之前的数据
+    }
+    [self.deals addObjectsFromArray:newDeals];
+    //2.刷新表格
+    [self.collectionView reloadData];
+    //3.结束上拉加载
+    [self.collectionView footerEndRefreshing];
 }
 - (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
     MTLog(@"请求失败--%@",error.userInfo);
@@ -231,20 +290,19 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    //计算一遍内边距
+    [self viewWillTransitionToSize:CGSizeMake(collectionView.width, 0) withTransitionCoordinator:nil];
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.deals.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
+    MTDealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.deal = self.deals[indexPath.item];
     
     return cell;
 }

@@ -1,0 +1,2 @@
+/Users/BILL/Library/Developer/Xcode/DerivedData/MeiTuan-fegtxzodavwbmfgoqlhbwfwhshvc/Build/Products/Debug-iphonesimulator/MeiTuan.app
+
