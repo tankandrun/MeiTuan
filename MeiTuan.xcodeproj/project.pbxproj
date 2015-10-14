@@ -87,6 +87,7 @@
 		A9E491F01BCE2A5E0007C841 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491EE1BCE2A5E0007C841 /* MTDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9E491F11BCE2A5E0007C841 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A9E491F51BCE409E0007C841 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = A9E491F41BCE409E0007C841 /* detail.html */; settings = {ASSET_TAGS = (); }; };
+		A9E491F81BCE786A0007C841 /* MTRestrictions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491F71BCE786A0007C841 /* MTRestrictions.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0211BCB8E3B00715AD3 /* MTRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01F1BCB8E3B00715AD3 /* MTRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EBF0201BCB8E3B00715AD3 /* MTRegionViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -268,6 +269,8 @@
 		A9E491EE1BCE2A5E0007C841 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
 		A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
 		A9E491F41BCE409E0007C841 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
+		A9E491F61BCE786A0007C841 /* MTRestrictions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRestrictions.h; sourceTree = "<group>"; };
+		A9E491F71BCE786A0007C841 /* MTRestrictions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRestrictions.m; sourceTree = "<group>"; };
 		A9EBF01B1BCB5E9400715AD3 /* MTMetaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMetaTool.h; sourceTree = "<group>"; };
 		A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMetaTool.m; sourceTree = "<group>"; };
 		A9EBF01E1BCB8E3B00715AD3 /* MTRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRegionViewController.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				A9EBF0241BCB91FC00715AD3 /* MTSorts.m */,
 				A9A6121C1BCC8DFB003284A2 /* MTDeal.h */,
 				A9A6121D1BCC8DFB003284A2 /* MTDeal.m */,
+				A9E491F61BCE786A0007C841 /* MTRestrictions.h */,
+				A9E491F71BCE786A0007C841 /* MTRestrictions.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -893,6 +898,7 @@
 				A9EBF0251BCB91FC00715AD3 /* MTSorts.m in Sources */,
 				A9E491C61BCCD7960007C841 /* AwesomeMenu.m in Sources */,
 				A9A6121E1BCC8DFB003284A2 /* MTDeal.m in Sources */,
+				A9E491F81BCE786A0007C841 /* MTRestrictions.m in Sources */,
 				A9BAE6651BC8B7CA00649A2D /* MTHomeDropdownSubCell.m in Sources */,
 				A9E491911BCC98E90007C841 /* SDWebImageCompat.m in Sources */,
 				A9E491951BCC98E90007C841 /* SDWebImageManager.m in Sources */,
