@@ -27,7 +27,9 @@
 #import "MTSearchViewController.h"
 #import "MTNavigationController.h"
 #import "MJRefresh.h"
-@interface MTHomeViewController ()
+#import "AwesomeMenu.h"
+#import "AwesomeMenuItem.h"
+@interface MTHomeViewController ()<AwesomeMenuDelegate>
 /** 分类item */
 @property (nonatomic,weak)UIBarButtonItem *categoryItem;
 /** 地区item */
@@ -58,6 +60,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setNotification];
+    //设置导航栏内容
+    [self setupLeftNav];
+    [self setupRightNav];
+    
+    //创建awesomemenu
+    [self setupAwesomeMenu];
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+- (void)setNotification {
     //监听分类改变
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(categoryDidChange:) name:MTCategoryDidChangedNotification object:nil];
     //监听城市改变
@@ -66,14 +80,61 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(regionDidChange:) name:MTRegionDidChangedNotification object:nil];
     //监听排序改变
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sortDidChange:) name:MTSortDidChangedNotification object:nil];
-    
-    //设置导航栏内容
-    [self setupLeftNav];
-    [self setupRightNav];
-    
 }
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
+- (void)setupAwesomeMenu {
+    //1.中间的Item
+    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"icon_pathMenu_background_normal"] highlightedImage:[UIImage imageNamed:@"icon_pathMenu_background_highlighted"] ContentImage:[UIImage imageNamed:@"icon_pathMenu_mainMine_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_mainMine_highlighted"]];
+    //2.周边的Item
+    AwesomeMenuItem *item0 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_highlighted"]];
+    AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_collect_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_collect_highlighted"]];
+    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_scan_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_scan_highlighted"]];
+    AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_more_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_more_highlighted"]];
+    
+    NSArray *items = @[item0,item1,item2,item3];
+    CGRect menuF = CGRectMake(0, 0, 200, 200);
+    AwesomeMenu *menu = [[AwesomeMenu alloc]initWithFrame:menuF startItem:startItem optionMenus:items];
+    //设置代理
+    menu.delegate = self;
+    //不要旋转
+    menu.rotateAddButton = NO;
+    [self.view addSubview:menu];
+    //设置菜单的活动范围
+    menu.menuWholeAngle = M_PI_2;
+    menu.startPoint = CGPointMake(50, 150);
+    //设置菜单永远在左下角
+    [menu autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+    [menu autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    [menu autoSetDimensionsToSize:CGSizeMake(200, 200)];
+}
+#pragma mark - AwesomeMenuDelegate
+- (void)awesomeMenuWillAnimateOpen:(AwesomeMenu *)menu {
+    //替换菜单图片
+    menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_cross_normal"];
+    menu.highlightedContentImage = [UIImage imageNamed:@"icon_pathMenu_cross_highlighted"];
+}
+- (void)awesomeMenuWillAnimateClose:(AwesomeMenu *)menu {
+    //替换菜单图片
+    menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mainMine_normal"];
+    menu.highlightedContentImage = [UIImage imageNamed:@"icon_pathMenu_mainMine_highlighted"];
+}
+- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
+    //替换菜单图片
+    switch (idx) {
+        case 0:
+            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mine_normal"];
+            break;
+        case 1:
+            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_collect_normal"];
+            break;
+        case 2:
+            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_scan_normal"];
+            break;
+        case 3:
+            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_more_normal"];
+            break;
+        default:
+            break;
+    }
 }
 #pragma mark - 监听通知
 - (void)cityDidChange:(NSNotification *)notification {
