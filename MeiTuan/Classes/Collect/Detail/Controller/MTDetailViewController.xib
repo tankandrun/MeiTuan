@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTDetailViewController">
+            <connections>
+                <outlet property="loadingView" destination="1lK-TU-U8T" id="IfP-Jy-Jfh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="0zr-rP-QxV" id="4Z7-k4-5aC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze7-CR-w17">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="400" id="TYI-B5-r3d"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-rP-QxV">
+                    <rect key="frame" x="420" y="0.0" width="160" height="600"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Qxn-yi-lcx"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1lK-TU-U8T">
+                    <rect key="frame" x="490" y="290" width="20" height="20"/>
+                    <animations/>
+                </activityIndicatorView>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="1lK-TU-U8T" firstAttribute="centerY" secondItem="0zr-rP-QxV" secondAttribute="centerY" id="8KN-Xx-GiB"/>
+                <constraint firstItem="1lK-TU-U8T" firstAttribute="centerX" secondItem="0zr-rP-QxV" secondAttribute="centerX" id="FHg-iX-GIJ"/>
+                <constraint firstAttribute="trailing" secondItem="0zr-rP-QxV" secondAttribute="trailing" constant="20" id="P0D-pt-9P1"/>
+                <constraint firstAttribute="bottom" secondItem="ze7-CR-w17" secondAttribute="bottom" id="ROF-Xo-HWN"/>
+                <constraint firstItem="0zr-rP-QxV" firstAttribute="leading" secondItem="ze7-CR-w17" secondAttribute="trailing" constant="20" id="SlI-x3-vfU"/>
+                <constraint firstAttribute="bottom" secondItem="0zr-rP-QxV" secondAttribute="bottom" id="ehG-ha-X2i"/>
+                <constraint firstItem="ze7-CR-w17" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hPT-8U-JSF"/>
+                <constraint firstItem="ze7-CR-w17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ji3-gf-PV9"/>
+                <constraint firstItem="0zr-rP-QxV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ocJ-gf-mIy"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <point key="canvasLocation" x="479" y="159"/>
+        </view>
+    </objects>
+</document>

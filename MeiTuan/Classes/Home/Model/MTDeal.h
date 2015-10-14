@@ -29,4 +29,7 @@
 /** 团购发布上线日期 */
 @property (nonatomic,copy)NSString *publish_date;
 
+/** 团购HTML5页面链接，适用于移动应用的联网车载应用 */
+@property (nonatomic,copy)NSString *deal_h5_url;
+
 @end

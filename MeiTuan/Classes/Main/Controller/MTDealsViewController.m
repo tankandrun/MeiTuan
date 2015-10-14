@@ -16,6 +16,7 @@
 #import "MTDeal.h"
 #import "UIView+Extension.h"
 #import "MBProgressHUD+MJ.h"
+#import "MTDetailViewController.h"
 @interface MTDealsViewController ()<DPRequestDelegate>
 /** 所有团购数据*/
 @property (nonatomic,strong)NSMutableArray *deals;
@@ -152,5 +153,9 @@ static NSString * const reuseIdentifier = @"deal";
 }
 
 #pragma mark <UICollectionViewDelegate>
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    MTDetailViewController *detailVC = [[MTDetailViewController alloc]init];
+    detailVC.deal = self.deals[indexPath.row];
+    [self presentViewController:detailVC animated:YES completion:nil];
+}
 @end

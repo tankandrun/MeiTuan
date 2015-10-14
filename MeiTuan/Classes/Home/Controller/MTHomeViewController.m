@@ -29,6 +29,8 @@
 #import "MJRefresh.h"
 #import "AwesomeMenu.h"
 #import "AwesomeMenuItem.h"
+#import "MTCollectViewController.h"
+#import "MTRecentViewController.h"
 @interface MTHomeViewController ()<AwesomeMenuDelegate>
 /** 分类item */
 @property (nonatomic,weak)UIBarButtonItem *categoryItem;
@@ -123,15 +125,22 @@
         case 0:
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mine_normal"];
             break;
-        case 1:
+        case 1:{//收藏
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_collect_normal"];
+            MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTCollectViewController alloc]init]];
+            [self presentViewController:nav animated:YES completion:nil];
             break;
-        case 2:
+        }
+        case 2:{//最近浏览
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_scan_normal"];
+            MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTRecentViewController alloc]init]];
+            [self presentViewController:nav animated:YES completion:nil];
             break;
-        case 3:
+        }
+        case 3:{//更多
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_more_normal"];
             break;
+        }
         default:
             break;
     }
@@ -255,8 +264,14 @@
 }
 #pragma mark - 顶部item点击
 - (void)search {
-    MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTSearchViewController alloc]init]];
-    [self presentViewController:nav animated:YES completion:nil];
+    if (self.selectedCityName) {
+        MTSearchViewController *searchVC = [[MTSearchViewController alloc]init];
+        searchVC.cityName = self.selectedCityName;
+        MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTSearchViewController alloc]init]];
+        [self presentViewController:nav animated:YES completion:nil];
+    }else {
+        [MBProgressHUD showError:@"请选择城市再搜索" toView:self.view];
+    }
 }
 - (void)categoryClick {
     //显示分类菜单

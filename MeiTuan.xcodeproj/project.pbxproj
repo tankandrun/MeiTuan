@@ -82,6 +82,11 @@
 		A9E491CA1BCCD7960007C841 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491C51BCCD7960007C841 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		A9E491D51BCCF3FA0007C841 /* MTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491D41BCCF3FA0007C841 /* MTSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9E491D81BCCF9670007C841 /* MTDealsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491D71BCCF9670007C841 /* MTDealsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491E71BCDF9FB0007C841 /* MTCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491E61BCDF9FB0007C841 /* MTCollectViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491EA1BCDFA0B0007C841 /* MTRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491E91BCDFA0B0007C841 /* MTRecentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491F01BCE2A5E0007C841 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491EE1BCE2A5E0007C841 /* MTDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491F11BCE2A5E0007C841 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		A9E491F51BCE409E0007C841 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = A9E491F41BCE409E0007C841 /* detail.html */; settings = {ASSET_TAGS = (); }; };
 		A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0211BCB8E3B00715AD3 /* MTRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01F1BCB8E3B00715AD3 /* MTRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EBF0201BCB8E3B00715AD3 /* MTRegionViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -255,6 +260,14 @@
 		A9E491D41BCCF3FA0007C841 /* MTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSearchViewController.m; sourceTree = "<group>"; };
 		A9E491D61BCCF9670007C841 /* MTDealsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDealsViewController.h; sourceTree = "<group>"; };
 		A9E491D71BCCF9670007C841 /* MTDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDealsViewController.m; sourceTree = "<group>"; };
+		A9E491E51BCDF9FB0007C841 /* MTCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectViewController.h; sourceTree = "<group>"; };
+		A9E491E61BCDF9FB0007C841 /* MTCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectViewController.m; sourceTree = "<group>"; };
+		A9E491E81BCDFA0B0007C841 /* MTRecentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRecentViewController.h; sourceTree = "<group>"; };
+		A9E491E91BCDFA0B0007C841 /* MTRecentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRecentViewController.m; sourceTree = "<group>"; };
+		A9E491ED1BCE2A5E0007C841 /* MTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
+		A9E491EE1BCE2A5E0007C841 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
+		A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
+		A9E491F41BCE409E0007C841 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
 		A9EBF01B1BCB5E9400715AD3 /* MTMetaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMetaTool.h; sourceTree = "<group>"; };
 		A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMetaTool.m; sourceTree = "<group>"; };
 		A9EBF01E1BCB8E3B00715AD3 /* MTRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRegionViewController.h; sourceTree = "<group>"; };
@@ -358,6 +371,9 @@
 		A9BAE5DC1BC7FC4A00649A2D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9E491EB1BCE29DC0007C841 /* Detail */,
+				A9E491DB1BCDF8D70007C841 /* Collect */,
+				A9E491DF1BCDF8D70007C841 /* Recent */,
 				A9E491CB1BCCEFCF0007C841 /* Search */,
 				A9BAE5DD1BC7FC4A00649A2D /* Home */,
 				A9BAE5E61BC7FC4A00649A2D /* Main */,
@@ -642,6 +658,60 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A9E491DB1BCDF8D70007C841 /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491DC1BCDF8D70007C841 /* Controller */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		A9E491DC1BCDF8D70007C841 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491E51BCDF9FB0007C841 /* MTCollectViewController.h */,
+				A9E491E61BCDF9FB0007C841 /* MTCollectViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9E491DF1BCDF8D70007C841 /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491E01BCDF8D70007C841 /* Controller */,
+			);
+			path = Recent;
+			sourceTree = "<group>";
+		};
+		A9E491E01BCDF8D70007C841 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491E81BCDFA0B0007C841 /* MTRecentViewController.h */,
+				A9E491E91BCDFA0B0007C841 /* MTRecentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9E491EB1BCE29DC0007C841 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491EC1BCE29DC0007C841 /* Controller */,
+			);
+			name = Detail;
+			path = Collect/Detail;
+			sourceTree = "<group>";
+		};
+		A9E491EC1BCE29DC0007C841 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491ED1BCE2A5E0007C841 /* MTDetailViewController.h */,
+				A9E491EE1BCE2A5E0007C841 /* MTDetailViewController.m */,
+				A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */,
+				A9E491F41BCE409E0007C841 /* detail.html */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A9EBF01A1BCB5E7600715AD3 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,7 +841,9 @@
 				A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */,
 				A9BAE6151BC89B2900649A2D /* categories.plist in Resources */,
 				A9BAE5F81BC7FC4A00649A2D /* MTHomeNavItem.xib in Resources */,
+				A9E491F11BCE2A5E0007C841 /* MTDetailViewController.xib in Resources */,
 				A9BAE6181BC89B2900649A2D /* sorts.plist in Resources */,
+				A9E491F51BCE409E0007C841 /* detail.html in Resources */,
 				A9E491C91BCCD7960007C841 /* MBProgressHUD.bundle in Resources */,
 				A9BAE6031BC7FD0900649A2D /* MTHomeDropDown.xib in Resources */,
 				A9BAE6161BC89B2900649A2D /* cities.plist in Resources */,
@@ -816,6 +888,7 @@
 				A9BAE5FC1BC7FC4A00649A2D /* AppDelegate.m in Sources */,
 				A9BAE6551BC89F1000649A2D /* MJArgument.m in Sources */,
 				A9E491CA1BCCD7960007C841 /* MBProgressHUD.m in Sources */,
+				A9E491EA1BCDFA0B0007C841 /* MTRecentViewController.m in Sources */,
 				A9BAE6811BC90CF000649A2D /* UIView+AutoLayout.m in Sources */,
 				A9EBF0251BCB91FC00715AD3 /* MTSorts.m in Sources */,
 				A9E491C61BCCD7960007C841 /* AwesomeMenu.m in Sources */,
@@ -824,6 +897,7 @@
 				A9E491911BCC98E90007C841 /* SDWebImageCompat.m in Sources */,
 				A9E491951BCC98E90007C841 /* SDWebImageManager.m in Sources */,
 				A9BAE5FA1BC7FC4A00649A2D /* UIView+Extension.m in Sources */,
+				A9E491F01BCE2A5E0007C841 /* MTDetailViewController.m in Sources */,
 				A9E491B61BCCB2A20007C841 /* MJRefreshFooterView.m in Sources */,
 				A9E491901BCC98E90007C841 /* SDImageCache.m in Sources */,
 				A9BAE65C1BC89F1000649A2D /* MJTypeEncoding.m in Sources */,
@@ -835,6 +909,7 @@
 				A9E491931BCC98E90007C841 /* SDWebImageDownloader.m in Sources */,
 				A9BAE65B1BC89F1000649A2D /* MJType.m in Sources */,
 				A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */,
+				A9E491E71BCDF9FB0007C841 /* MTCollectViewController.m in Sources */,
 				A9EBF0291BCB96DC00715AD3 /* MTSortViewController.m in Sources */,
 				A9E491991BCC98E90007C841 /* UIImage+MultiFormat.m in Sources */,
 				A9E491BA1BCCB2A20007C841 /* UIView+MJExtension.m in Sources */,
