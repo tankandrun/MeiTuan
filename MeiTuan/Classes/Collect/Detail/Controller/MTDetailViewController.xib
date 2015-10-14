@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="Forth" destination="7U4-W6-KfG" id="YaT-I7-LyV"/>
                 <outlet property="Third" destination="Wdr-VS-Byo" id="sCZ-U1-TnJ"/>
+                <outlet property="buyNowButton" destination="1Fy-ff-c4D" id="Jbb-qM-lQG"/>
+                <outlet property="collectButton" destination="Zc1-Bp-fkk" id="KEu-Ob-7Ad"/>
                 <outlet property="currentLabel" destination="Gpv-h5-Qka" id="0p0-5t-7XU"/>
                 <outlet property="detailLabel" destination="YQx-Nx-h5H" id="NYJ-TO-vtI"/>
                 <outlet property="first" destination="x2d-AB-dCk" id="hyu-pw-Dau"/>
@@ -15,6 +17,7 @@
                 <outlet property="loadingView" destination="1lK-TU-U8T" id="IfP-Jy-Jfh"/>
                 <outlet property="priceLabel" destination="OmX-ov-aVw" id="32r-kR-7cI"/>
                 <outlet property="second" destination="fxU-aW-B2M" id="ls9-o8-PGC"/>
+                <outlet property="shareButton" destination="LEw-TR-m7q" id="3wH-mB-Pbz"/>
                 <outlet property="titleLabel" destination="320-za-76K" id="0Ar-SR-DaD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="0zr-rP-QxV" id="4Z7-k4-5aC"/>
@@ -140,8 +143,8 @@
                                         <constraint firstAttribute="width" constant="50" id="cgd-Pb-4gs"/>
                                         <constraint firstAttribute="height" constant="50" id="tmq-JX-Boa"/>
                                     </constraints>
-                                    <state key="normal" image="icon_collect"/>
-                                    <state key="highlighted" image="icon_collect_highlighted"/>
+                                    <state key="normal" backgroundImage="icon_collect"/>
+                                    <state key="selected" backgroundImage="icon_collect_highlighted"/>
                                     <connections>
                                         <action selector="collect:" destination="-1" eventType="touchUpInside" id="mzA-mg-GJv"/>
                                     </connections>

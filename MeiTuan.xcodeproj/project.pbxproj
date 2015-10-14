@@ -88,6 +88,13 @@
 		A9E491F11BCE2A5E0007C841 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E491EF1BCE2A5E0007C841 /* MTDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A9E491F51BCE409E0007C841 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = A9E491F41BCE409E0007C841 /* detail.html */; settings = {ASSET_TAGS = (); }; };
 		A9E491F81BCE786A0007C841 /* MTRestrictions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491F71BCE786A0007C841 /* MTRestrictions.m */; settings = {ASSET_TAGS = (); }; };
+		A9E491FC1BCE88E90007C841 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E491FB1BCE88E90007C841 /* libsqlite3.tbd */; };
+		A9E492001BCE896E0007C841 /* MTDealTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E491FF1BCE896E0007C841 /* MTDealTool.m */; settings = {ASSET_TAGS = (); }; };
+		A9E4920D1BCE8A240007C841 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E492031BCE8A240007C841 /* FMDatabase.m */; settings = {ASSET_TAGS = (); }; };
+		A9E4920E1BCE8A240007C841 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E492051BCE8A240007C841 /* FMDatabaseAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		A9E4920F1BCE8A240007C841 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E492071BCE8A240007C841 /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
+		A9E492101BCE8A240007C841 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E492091BCE8A240007C841 /* FMDatabaseQueue.m */; settings = {ASSET_TAGS = (); }; };
+		A9E492111BCE8A240007C841 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E4920C1BCE8A240007C841 /* FMResultSet.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0211BCB8E3B00715AD3 /* MTRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF01F1BCB8E3B00715AD3 /* MTRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EBF0201BCB8E3B00715AD3 /* MTRegionViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -271,6 +278,20 @@
 		A9E491F41BCE409E0007C841 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
 		A9E491F61BCE786A0007C841 /* MTRestrictions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRestrictions.h; sourceTree = "<group>"; };
 		A9E491F71BCE786A0007C841 /* MTRestrictions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRestrictions.m; sourceTree = "<group>"; };
+		A9E491FB1BCE88E90007C841 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A9E491FE1BCE896E0007C841 /* MTDealTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDealTool.h; sourceTree = "<group>"; };
+		A9E491FF1BCE896E0007C841 /* MTDealTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDealTool.m; sourceTree = "<group>"; };
+		A9E492021BCE8A240007C841 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A9E492031BCE8A240007C841 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A9E492041BCE8A240007C841 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A9E492051BCE8A240007C841 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A9E492061BCE8A240007C841 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A9E492071BCE8A240007C841 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A9E492081BCE8A240007C841 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A9E492091BCE8A240007C841 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A9E4920A1BCE8A240007C841 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A9E4920B1BCE8A240007C841 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A9E4920C1BCE8A240007C841 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		A9EBF01B1BCB5E9400715AD3 /* MTMetaTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMetaTool.h; sourceTree = "<group>"; };
 		A9EBF01C1BCB5E9400715AD3 /* MTMetaTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMetaTool.m; sourceTree = "<group>"; };
 		A9EBF01E1BCB8E3B00715AD3 /* MTRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRegionViewController.h; sourceTree = "<group>"; };
@@ -293,6 +314,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E491FC1BCE88E90007C841 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +338,7 @@
 		A9BAE5841BC7E22200649A2D = {
 			isa = PBXGroup;
 			children = (
+				A9E491FB1BCE88E90007C841 /* libsqlite3.tbd */,
 				A9BAE58F1BC7E22200649A2D /* MeiTuan */,
 				A9BAE5A91BC7E22200649A2D /* MeiTuanTests */,
 				A9BAE5B41BC7E22200649A2D /* MeiTuanUITests */,
@@ -462,6 +485,7 @@
 		A9BAE5E61BC7FC4A00649A2D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A9E491FD1BCE89540007C841 /* Tool */,
 				A9BAE5E71BC7FC4A00649A2D /* Category */,
 				A9BAE5EC1BC7FC4A00649A2D /* Controller */,
 				A9BAE5EF1BC7FC4A00649A2D /* Lib */,
@@ -498,6 +522,7 @@
 		A9BAE5EF1BC7FC4A00649A2D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A9E492011BCE8A240007C841 /* fmdb */,
 				A9E491BB1BCCD7960007C841 /* AwesomeMenu */,
 				A9E491C01BCCD7960007C841 /* MBProgressHUD */,
 				A9E491A21BCCB2A20007C841 /* MJRefresh */,
@@ -717,6 +742,33 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A9E491FD1BCE89540007C841 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A9E491FE1BCE896E0007C841 /* MTDealTool.h */,
+				A9E491FF1BCE896E0007C841 /* MTDealTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A9E492011BCE8A240007C841 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A9E492021BCE8A240007C841 /* FMDatabase.h */,
+				A9E492031BCE8A240007C841 /* FMDatabase.m */,
+				A9E492041BCE8A240007C841 /* FMDatabaseAdditions.h */,
+				A9E492051BCE8A240007C841 /* FMDatabaseAdditions.m */,
+				A9E492061BCE8A240007C841 /* FMDatabasePool.h */,
+				A9E492071BCE8A240007C841 /* FMDatabasePool.m */,
+				A9E492081BCE8A240007C841 /* FMDatabaseQueue.h */,
+				A9E492091BCE8A240007C841 /* FMDatabaseQueue.m */,
+				A9E4920A1BCE8A240007C841 /* FMDB.h */,
+				A9E4920B1BCE8A240007C841 /* FMResultSet.h */,
+				A9E4920C1BCE8A240007C841 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		A9EBF01A1BCB5E7600715AD3 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -886,6 +938,7 @@
 				A9BAE5F71BC7FC4A00649A2D /* MTHomeNavItem.m in Sources */,
 				A9E4916A1BCC97B40007C841 /* MTDealCell.m in Sources */,
 				A9E4919B1BCC98E90007C841 /* UIImageView+HighlightedWebCache.m in Sources */,
+				A9E492001BCE896E0007C841 /* MTDealTool.m in Sources */,
 				A9E491B71BCCB2A20007C841 /* MJRefreshHeaderView.m in Sources */,
 				A9E491B41BCCB2A20007C841 /* MJRefreshBaseView.m in Sources */,
 				A9BAE6011BC7FCF300649A2D /* MTHomeDropDown.m in Sources */,
@@ -894,7 +947,9 @@
 				A9BAE6551BC89F1000649A2D /* MJArgument.m in Sources */,
 				A9E491CA1BCCD7960007C841 /* MBProgressHUD.m in Sources */,
 				A9E491EA1BCDFA0B0007C841 /* MTRecentViewController.m in Sources */,
+				A9E4920E1BCE8A240007C841 /* FMDatabaseAdditions.m in Sources */,
 				A9BAE6811BC90CF000649A2D /* UIView+AutoLayout.m in Sources */,
+				A9E492101BCE8A240007C841 /* FMDatabaseQueue.m in Sources */,
 				A9EBF0251BCB91FC00715AD3 /* MTSorts.m in Sources */,
 				A9E491C61BCCD7960007C841 /* AwesomeMenu.m in Sources */,
 				A9A6121E1BCC8DFB003284A2 /* MTDeal.m in Sources */,
@@ -925,6 +980,7 @@
 				A9E491D51BCCF3FA0007C841 /* MTSearchViewController.m in Sources */,
 				A9E491C71BCCD7960007C841 /* AwesomeMenuItem.m in Sources */,
 				A9E491B91BCCB2A20007C841 /* UIScrollView+MJRefresh.m in Sources */,
+				A9E492111BCE8A240007C841 /* FMResultSet.m in Sources */,
 				A9BAE6621BC8B7B400649A2D /* MTHomeDropdownMainCell.m in Sources */,
 				A9BAE6581BC89F1000649A2D /* MJIvar.m in Sources */,
 				A9EBF06F1BCBDAEA00715AD3 /* DPAPI.m in Sources */,
@@ -938,10 +994,12 @@
 				A9EBF0211BCB8E3B00715AD3 /* MTRegionViewController.m in Sources */,
 				A9BAE65D1BC89F1000649A2D /* NSObject+MJCoding.m in Sources */,
 				A9E491981BCC98E90007C841 /* UIImage+GIF.m in Sources */,
+				A9E4920F1BCE8A240007C841 /* FMDatabasePool.m in Sources */,
 				A9BAE5FB1BC7FC4A00649A2D /* MTNavigationController.m in Sources */,
 				A9BAE6561BC89F1000649A2D /* MJConst.m in Sources */,
 				A9BAE6781BC8E70E00649A2D /* MTRegion.m in Sources */,
 				A9E491B81BCCB2A20007C841 /* UIScrollView+MJExtension.m in Sources */,
+				A9E4920D1BCE8A240007C841 /* FMDatabase.m in Sources */,
 				A9E4918E1BCC98E90007C841 /* MKAnnotationView+WebCache.m in Sources */,
 				A9EBF0721BCBE02900715AD3 /* Foundation+Log.m in Sources */,
 				A9E491A11BCCA4AB0007C841 /* MTCenterLineLabel.m in Sources */,

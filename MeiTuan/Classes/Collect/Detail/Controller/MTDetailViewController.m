@@ -14,6 +14,8 @@
 #import "MBProgressHUD+MJ.h"
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
+#import "MTDealTool.h"
+#import "MBProgressHUD.h"
 @interface MTDetailViewController ()<UIWebViewDelegate,DPRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingView;
@@ -29,6 +31,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *second;
 @property (weak, nonatomic) IBOutlet UIButton *Third;
 @property (weak, nonatomic) IBOutlet UIButton *Forth;
+@property (weak, nonatomic) IBOutlet UIButton *collectButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *buyNowButton;
 
 - (IBAction)buy:(id)sender;
 - (IBAction)collect:(id)sender;
@@ -59,8 +64,7 @@
         }
     }
     [self.Forth setTitle:[NSString stringWithFormat:@"已售%d",self.deal.purchase_count] forState:UIControlStateNormal];
-    
-    MTLog(@"%@",self.deal.purchase_deadline);
+    //获取剩余时间
     NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
     fmt.dateFormat = @"yyyy-MM-dd";
     NSDate *dead = [fmt dateFromString:self.deal.purchase_deadline];
@@ -80,6 +84,9 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"deal_id"] = self.deal.deal_id;
     [api requestWithURL:@"v1/deal/get_single_deal" params:params delegate:self];
+    
+    //设置收藏状态
+    self.collectButton.selected = [MTDealTool isCollected:self.deal];
 }
 /**
  *  控制器支持的方向
@@ -139,11 +146,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)buy:(id)sender {
+    
 }
-
 - (IBAction)collect:(id)sender {
+    if (self.collectButton.isSelected) {//取消收藏
+        [MTDealTool removeCollectDeal:self.deal];
+        [MBProgressHUD showSuccess:@"取消收藏成功" toView:self.view];
+    }else {//收藏
+        [MTDealTool addCollectDeal:self.deal];
+        [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
+    }
+    self.collectButton.selected = !self.collectButton.isSelected;
 }
-
 - (IBAction)share:(id)sender {
+    
 }
 @end
