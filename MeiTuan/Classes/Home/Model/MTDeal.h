@@ -37,4 +37,9 @@
 /** 团购限制条件 */
 @property (nonatomic,strong)MTRestrictions *restrictions;
 
+@property (nonatomic, assign,getter=isEditing) BOOL editing;
+@property (nonatomic, assign,getter=isChecking) BOOL checking;
+
+
+
 @end

@@ -14,3 +14,7 @@ NSString *const MTSelectedSubCategoryName = @"MTSelectedSubCategoryName";
 NSString *const MTRegionDidChangedNotification = @"MTRegionDidChangedNotification";
 NSString *const MTSelectedRegion = @"MTSelectedRegion";
 NSString *const MTSelectedSubRegionName = @"MTSelectedSubRegionName";
+
+NSString *const MTCollectStateDidChangedNotification = @"MTCollectStateDidChangedNotification";
+NSString *const MTIsCollectKey = @"MTIsCollectKey";
+NSString *const MTCollectDealKey = @"MTCollectDealKey";

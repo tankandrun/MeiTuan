@@ -155,7 +155,7 @@ static NSString * const reuseIdentifier = @"deal";
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     MTDetailViewController *detailVC = [[MTDetailViewController alloc]init];
-    detailVC.deal = self.deals[indexPath.row];
+    detailVC.deal = self.deals[indexPath.item];
     [self presentViewController:detailVC animated:YES completion:nil];
 }
 @end

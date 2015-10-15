@@ -39,12 +39,19 @@
 - (IBAction)collect:(id)sender;
 - (IBAction)share:(id)sender;
 
+//ShareSDK
+//友盟分享
+//百度分享
+
 @end
 
 @implementation MTDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //打开一个团购 --> 访问了这个团购 --> 增加到最近访问
+    
     //基本设置
     self.view.backgroundColor = MTGlobalBg;
     //加载网页
@@ -149,6 +156,9 @@
     
 }
 - (IBAction)collect:(id)sender {
+    NSMutableDictionary *info = [NSMutableDictionary dictionary];
+    info[MTCollectDealKey] = self.deal;
+    
     if (self.collectButton.isSelected) {//取消收藏
         [MTDealTool removeCollectDeal:self.deal];
         [MBProgressHUD showSuccess:@"取消收藏成功" toView:self.view];
@@ -157,6 +167,9 @@
         [MBProgressHUD showSuccess:@"收藏成功" toView:self.view];
     }
     self.collectButton.selected = !self.collectButton.isSelected;
+    //发出通知
+    [[NSNotificationCenter defaultCenter]postNotificationName:MTCollectStateDidChangedNotification object:nil userInfo:info];
+    
 }
 - (IBAction)share:(id)sender {
     

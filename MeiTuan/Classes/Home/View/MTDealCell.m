@@ -21,6 +21,10 @@
  属性名不能以new开头
  */
 @property (weak, nonatomic) IBOutlet UIImageView *dealNewView;
+- (IBAction)coverClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *cover;
+@property (weak, nonatomic) IBOutlet UIImageView *checkView;
+
 @end
 
 @implementation MTDealCell
@@ -59,6 +63,12 @@
     NSString *nowStr = [fmt stringFromDate:[NSDate date]];
     //隐藏: 发布日期 < 今天
     self.dealNewView.hidden = ([deal.publish_date compare:nowStr] == NSOrderedAscending);
+    
+    //根据模型属性来控制cover的实现和隐藏
+    self.cover.hidden = !deal.editing;
+    
+    //根据模型属性来控制打勾的显示
+    self.checkView.hidden = !deal.isChecking;
 }
 - (void)drawRect:(CGRect)rect
 {
@@ -67,4 +77,15 @@
     // 拉伸
     [[UIImage imageNamed:@"bg_dealcell"] drawInRect:rect];
 }
+- (IBAction)coverClick:(id)sender {
+    //设置模型
+    self.deal.checking = !self.deal.isChecking;
+    //直接修改状态
+    self.checkView.hidden = !self.checkView.isHidden;
+    
+    if ([self.delegate respondsToSelector:@selector(dealCellCheckingStateDidChange:)]) {
+        [self.delegate dealCellCheckingStateDidChange:self];
+    }
+}
+
 @end

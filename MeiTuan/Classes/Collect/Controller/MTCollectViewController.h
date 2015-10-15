@@ -1,9 +1,9 @@
 //
 //  MTCollectViewController.h
-//  MeiTuan
+//  美团HD
 //
-//  Created by 金顺度 on 15/10/14.
-//  Copyright © 2015年 金顺度. All rights reserved.
+//  Created by apple on 14/11/26.
+//  Copyright (c) 2014年 heima. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

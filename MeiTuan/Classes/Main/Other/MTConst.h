@@ -23,3 +23,7 @@ extern NSString *const MTSelectedSubCategoryName;
 extern NSString *const MTRegionDidChangedNotification;
 extern NSString *const MTSelectedRegion;
 extern NSString *const MTSelectedSubRegionName;
+
+extern NSString *const MTCollectStateDidChangedNotification;
+extern NSString *const MTIsCollectKey;
+extern NSString *const MTCollectDealKey;
