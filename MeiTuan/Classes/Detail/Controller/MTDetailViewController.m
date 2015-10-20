@@ -153,7 +153,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)buy:(id)sender {
-    
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:self.deal.deal_url]];
 }
 - (IBAction)collect:(id)sender {
     NSMutableDictionary *info = [NSMutableDictionary dictionary];

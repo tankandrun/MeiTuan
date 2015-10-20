@@ -33,6 +33,7 @@
 
 /** 团购HTML5页面链接，适用于移动应用的联网车载应用 */
 @property (nonatomic,copy)NSString *deal_h5_url;
+@property (nonatomic,copy)NSString *deal_url;
 
 /** 团购限制条件 */
 @property (nonatomic,strong)MTRestrictions *restrictions;
@@ -40,6 +41,6 @@
 @property (nonatomic, assign,getter=isEditing) BOOL editing;
 @property (nonatomic, assign,getter=isChecking) BOOL checking;
 
-
-
+@property (nonatomic,strong)NSArray *businesses;
+@property (nonatomic,strong)NSArray *categories;
 @end

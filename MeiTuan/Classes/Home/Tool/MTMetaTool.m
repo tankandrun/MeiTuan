@@ -11,6 +11,7 @@
 #import "MTCategory.h"
 #import "MJExtension.h"
 #import "MTSorts.h"
+#import "MTDeal.h"
 
 @implementation MTMetaTool
 static NSArray *_cities;
@@ -33,5 +34,18 @@ static NSArray *_sorts;
         _sorts = [MTSorts objectArrayWithFilename:@"sorts.plist"];
     }
     return _sorts;
+}
++ (MTCategory *)categoryWithDeal:(MTDeal *)deal {
+    NSArray *cs = [self categories];
+    NSString *cname = [deal.categories firstObject];
+    for (MTCategory *c in cs) {
+        if ([cname isEqualToString:c.name]) {
+            return c;
+        }
+        if ([c.subcategories containsObject:cname]) {
+            return c;
+        }
+    }
+    return nil;
 }
 @end

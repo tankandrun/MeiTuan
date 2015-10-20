@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E82606E1BD612640037EB5C /* MTBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E82606D1BD612640037EB5C /* MTBusiness.m */; settings = {ASSET_TAGS = (); }; };
+		4E8260721BD614C30037EB5C /* MTDealAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8260711BD614C30037EB5C /* MTDealAnnotation.m */; settings = {ASSET_TAGS = (); }; };
 		A9371C1F1BCF4A7E00F33A40 /* MTCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9371C1E1BCF4A7E00F33A40 /* MTCollectViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9371C261BCF4C3900F33A40 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = A9371C221BCF4C3900F33A40 /* detail.html */; settings = {ASSET_TAGS = (); }; };
 		A9371C271BCF4C3900F33A40 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9371C241BCF4C3900F33A40 /* MTDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A9371C281BCF4C3900F33A40 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9371C251BCF4C3900F33A40 /* MTDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		A947DF451BD5D3FD00BAAA90 /* MTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A947DF431BD5D3FD00BAAA90 /* MTMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A947DF461BD5D3FD00BAAA90 /* MTMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A947DF441BD5D3FD00BAAA90 /* MTMapViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		A9A6121E1BCC8DFB003284A2 /* MTDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A6121D1BCC8DFB003284A2 /* MTDeal.m */; settings = {ASSET_TAGS = (); }; };
 		A9BAE5AB1BC7E22200649A2D /* MeiTuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAE5AA1BC7E22200649A2D /* MeiTuanTests.m */; };
 		A9BAE5B61BC7E22200649A2D /* MeiTuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAE5B51BC7E22200649A2D /* MeiTuanUITests.m */; };
@@ -123,12 +127,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E82606C1BD612640037EB5C /* MTBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBusiness.h; sourceTree = "<group>"; };
+		4E82606D1BD612640037EB5C /* MTBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBusiness.m; sourceTree = "<group>"; };
+		4E8260701BD614C30037EB5C /* MTDealAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDealAnnotation.h; sourceTree = "<group>"; };
+		4E8260711BD614C30037EB5C /* MTDealAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDealAnnotation.m; sourceTree = "<group>"; };
 		A9371C1D1BCF4A7E00F33A40 /* MTCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCollectViewController.h; sourceTree = "<group>"; };
 		A9371C1E1BCF4A7E00F33A40 /* MTCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCollectViewController.m; sourceTree = "<group>"; };
 		A9371C221BCF4C3900F33A40 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = detail.html; path = Controller/detail.html; sourceTree = "<group>"; };
 		A9371C231BCF4C3900F33A40 /* MTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
 		A9371C241BCF4C3900F33A40 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
 		A9371C251BCF4C3900F33A40 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
+		A947DF421BD5D3FD00BAAA90 /* MTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapViewController.h; sourceTree = "<group>"; };
+		A947DF431BD5D3FD00BAAA90 /* MTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMapViewController.m; sourceTree = "<group>"; };
+		A947DF441BD5D3FD00BAAA90 /* MTMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMapViewController.xib; sourceTree = "<group>"; };
 		A9A6121C1BCC8DFB003284A2 /* MTDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDeal.h; sourceTree = "<group>"; };
 		A9A6121D1BCC8DFB003284A2 /* MTDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDeal.m; sourceTree = "<group>"; };
 		A9BAE58D1BC7E22200649A2D /* MeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +346,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E82606F1BD614990037EB5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E8260701BD614C30037EB5C /* MTDealAnnotation.h */,
+				4E8260711BD614C30037EB5C /* MTDealAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A9371C201BCF4C3900F33A40 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +370,25 @@
 				A9371C231BCF4C3900F33A40 /* MTDetailViewController.h */,
 				A9371C241BCF4C3900F33A40 /* MTDetailViewController.m */,
 				A9371C251BCF4C3900F33A40 /* MTDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A947DF381BD5D32C00BAAA90 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4E82606F1BD614990037EB5C /* Model */,
+				A947DF391BD5D32C00BAAA90 /* Controller */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A947DF391BD5D32C00BAAA90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A947DF421BD5D3FD00BAAA90 /* MTMapViewController.h */,
+				A947DF431BD5D3FD00BAAA90 /* MTMapViewController.m */,
+				A947DF441BD5D3FD00BAAA90 /* MTMapViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +455,7 @@
 		A9BAE5DC1BC7FC4A00649A2D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A947DF381BD5D32C00BAAA90 /* Map */,
 				A9371C201BCF4C3900F33A40 /* Detail */,
 				A9E491DB1BCDF8D70007C841 /* Collect */,
 				A9E491DF1BCDF8D70007C841 /* Recent */,
@@ -473,6 +513,8 @@
 				A9EBF0241BCB91FC00715AD3 /* MTSorts.m */,
 				A9A6121C1BCC8DFB003284A2 /* MTDeal.h */,
 				A9A6121D1BCC8DFB003284A2 /* MTDeal.m */,
+				4E82606C1BD612640037EB5C /* MTBusiness.h */,
+				4E82606D1BD612640037EB5C /* MTBusiness.m */,
 				A9E491F61BCE786A0007C841 /* MTRestrictions.h */,
 				A9E491F71BCE786A0007C841 /* MTRestrictions.m */,
 			);
@@ -896,6 +938,7 @@
 				A9BAE6721BC8E24500649A2D /* MTCityViewController.xib in Resources */,
 				A9EBF0221BCB8E3B00715AD3 /* MTRegionViewController.xib in Resources */,
 				A9BAE6151BC89B2900649A2D /* categories.plist in Resources */,
+				A947DF461BD5D3FD00BAAA90 /* MTMapViewController.xib in Resources */,
 				A9BAE5F81BC7FC4A00649A2D /* MTHomeNavItem.xib in Resources */,
 				A9BAE6181BC89B2900649A2D /* sorts.plist in Resources */,
 				A9E491C91BCCD7960007C841 /* MBProgressHUD.bundle in Resources */,
@@ -961,6 +1004,7 @@
 				A9E491901BCC98E90007C841 /* SDImageCache.m in Sources */,
 				A9BAE65C1BC89F1000649A2D /* MJTypeEncoding.m in Sources */,
 				A9E491D81BCCF9670007C841 /* MTDealsViewController.m in Sources */,
+				A947DF451BD5D3FD00BAAA90 /* MTMapViewController.m in Sources */,
 				A9E491B51BCCB2A20007C841 /* MJRefreshConst.m in Sources */,
 				A9E491921BCC98E90007C841 /* SDWebImageDecoder.m in Sources */,
 				A9BAE6061BC802F500649A2D /* MTCategoryViewController.m in Sources */,
@@ -970,6 +1014,7 @@
 				A9EBF01D1BCB5E9400715AD3 /* MTMetaTool.m in Sources */,
 				A9EBF0291BCB96DC00715AD3 /* MTSortViewController.m in Sources */,
 				A9E491991BCC98E90007C841 /* UIImage+MultiFormat.m in Sources */,
+				4E82606E1BD612640037EB5C /* MTBusiness.m in Sources */,
 				A9E491BA1BCCB2A20007C841 /* UIView+MJExtension.m in Sources */,
 				A9BAE6711BC8E24500649A2D /* MTCityViewController.m in Sources */,
 				A9E4919A1BCC98E90007C841 /* UIImage+WebP.m in Sources */,
@@ -1008,6 +1053,7 @@
 				A9BAE61B1BC89CC600649A2D /* MTCategory.m in Sources */,
 				A9E4919C1BCC98E90007C841 /* UIImageView+WebCache.m in Sources */,
 				A9BAE6751BC8E61100649A2D /* MTCity.m in Sources */,
+				4E8260721BD614C30037EB5C /* MTDealAnnotation.m in Sources */,
 				A9BAE67B1BC8ED5A00649A2D /* MTCityGroups.m in Sources */,
 				A9BAE65E1BC89F1000649A2D /* NSObject+MJKeyValue.m in Sources */,
 			);

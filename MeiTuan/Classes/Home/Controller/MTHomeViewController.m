@@ -31,6 +31,7 @@
 #import "AwesomeMenuItem.h"
 #import "MTCollectViewController.h"
 #import "MTRecentViewController.h"
+#import "MTMapViewController.h"
 @interface MTHomeViewController ()<AwesomeMenuDelegate>
 /** 分类item */
 @property (nonatomic,weak)UIBarButtonItem *categoryItem;
@@ -62,7 +63,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setNotification];
     //设置导航栏内容
     [self setupLeftNav];
     [self setupRightNav];
@@ -70,8 +70,13 @@
     //创建awesomemenu
     [self setupAwesomeMenu];
 }
-- (void)dealloc {
+- (void)viewWillDisappear:(BOOL)animated {//保证前面控制器不受地图控制器干扰
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+- (void)viewWillAppear:(BOOL)animated {//保证前面控制器不受地图控制器干扰
+    [super viewWillAppear:animated];
+    [self setNotification];
 }
 - (void)setNotification {
     //监听分类改变
@@ -256,13 +261,17 @@
     self.navigationItem.leftBarButtonItems = @[logoItem,categoryItem,regionItem,sortItem];
 }
 - (void)setupRightNav {
-    UIBarButtonItem *mapItem = [UIBarButtonItem itemWithTarget:nil action:nil image:@"icon_map" highImage:@"icon_map_highlighted"];
+    UIBarButtonItem *mapItem = [UIBarButtonItem itemWithTarget:self action:@selector(map) image:@"icon_map" highImage:@"icon_map_highlighted"];
     mapItem.customView.width = 60;
     UIBarButtonItem *searchItem = [UIBarButtonItem itemWithTarget:self action:@selector(search) image:@"icon_search" highImage:@"icon_search_highlighted"];
     searchItem.customView.width = 60;
     self.navigationItem.rightBarButtonItems = @[mapItem,searchItem];
 }
 #pragma mark - 顶部item点击
+- (void)map {
+    MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTMapViewController alloc]init]];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 - (void)search {
     if (self.selectedCityName) {
         MTSearchViewController *searchVC = [[MTSearchViewController alloc]init];
