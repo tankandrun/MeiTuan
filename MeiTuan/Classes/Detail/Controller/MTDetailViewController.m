@@ -51,6 +51,7 @@
     [super viewDidLoad];
     
     //打开一个团购 --> 访问了这个团购 --> 增加到最近访问
+    [MTDealTool addRecentDeal:self.deal];
     
     //基本设置
     self.view.backgroundColor = MTGlobalBg;

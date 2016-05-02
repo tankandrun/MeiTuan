@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTRegionViewController">
@@ -19,7 +20,6 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TV-aR-C0y">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <animations/>
                             <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="切换城市" image="btn_changeCity">
@@ -32,14 +32,12 @@
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cell_rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="f63-a0-Rt1">
                             <rect key="frame" x="573" y="13.5" width="17" height="17"/>
-                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="17" id="4GQ-9Q-kru"/>
                                 <constraint firstAttribute="width" constant="17" id="J7e-5d-zCl"/>
                             </constraints>
                         </imageView>
                     </subviews>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="1TV-aR-C0y" secondAttribute="trailing" id="A9n-af-KAB"/>
                         <constraint firstItem="f63-a0-Rt1" firstAttribute="centerY" secondItem="Gbf-lt-ilX" secondAttribute="centerY" id="C51-cF-uod"/>
@@ -52,7 +50,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Gbf-lt-ilX" firstAttribute="leading" secondItem="f2a-ih-24P" secondAttribute="leading" id="Cnv-Cd-c4w"/>

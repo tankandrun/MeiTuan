@@ -33,8 +33,7 @@ NSString *const MTEdit = @"编辑";
 @end
 
 @implementation MTCollectViewController
-- (UIBarButtonItem *)backItem
-{
+- (UIBarButtonItem *)backItem{
     if (!_backItem) {
         self.backItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"icon_back" highImage:@"icon_back_highlighted"];
     }
@@ -59,29 +58,26 @@ NSString *const MTEdit = @"编辑";
     }
     return _removeItem;
 }
-- (NSMutableArray *)deals
-{
+- (NSMutableArray *)deals{
     if (!_deals) {
         self.deals = [[NSMutableArray alloc] init];
     }
     return _deals;
 }
 
-- (UIImageView *)noDataView
-{
+- (UIImageView *)noDataView{
     if (!_noDataView) {
         // 添加一个"没有数据"的提醒
         UIImageView *noDataView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_collects_empty"]];
         [self.view addSubview:noDataView];
         [noDataView autoCenterInSuperview];
-        self.noDataView = noDataView;
+        _noDataView = noDataView;
     }
     return _noDataView;
 }
 
 static NSString * const reuseIdentifier = @"deal";
-- (instancetype)init
-{
+- (instancetype)init{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     // cell的大小
     layout.itemSize = CGSizeMake(305, 305);
@@ -91,7 +87,7 @@ static NSString * const reuseIdentifier = @"deal";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"收藏的团购";
+    self.title = @"收藏";
     self.collectionView.backgroundColor = MTGlobalBg;
     
     // 左边的返回
@@ -129,6 +125,7 @@ static NSString * const reuseIdentifier = @"deal";
     self.removeItem.enabled = NO;
     [self.collectionView reloadData];
 }
+
 - (void)remove:(UIBarButtonItem *)item {
     NSMutableArray *tempArray = [NSMutableArray array];
     for (MTDeal *deal in self.deals) {//数组在遍历时是不能修改删除的
@@ -142,6 +139,7 @@ static NSString * const reuseIdentifier = @"deal";
     [self.collectionView reloadData];
     self.removeItem.enabled = NO;
 }
+
 - (void)edit:(UIBarButtonItem *)item {
     if ([item.title isEqualToString:MTEdit]) {
         item.title = MTDone;
@@ -164,6 +162,7 @@ static NSString * const reuseIdentifier = @"deal";
     //刷新表格
     [self.collectionView reloadData];
 }
+
 - (void)loadMoreDeals {
     //增加页码
     self.currentPage++;
@@ -183,8 +182,7 @@ static NSString * const reuseIdentifier = @"deal";
 /**
  当屏幕旋转,控制器view的尺寸发生改变调用
  */
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     // 根据屏幕宽度决定列数
     int cols = (size.width == 1024) ? 3 : 2;
     

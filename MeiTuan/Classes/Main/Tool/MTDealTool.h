@@ -26,4 +26,12 @@
  *  团购是否收藏
  */
 + (BOOL)isCollected:(MTDeal *)deal;
+
+
++ (NSArray *)recentDeals:(int)page;
+//添加最近浏览记录
++ (void)addRecentDeal:(MTDeal *)deal;
+//删除最近浏览记录
++ (void)removeRecentDeal:(MTDeal *)deal;
+
 @end
