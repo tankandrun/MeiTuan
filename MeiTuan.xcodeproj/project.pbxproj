@@ -13,6 +13,7 @@
 		A9371C261BCF4C3900F33A40 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = A9371C221BCF4C3900F33A40 /* detail.html */; };
 		A9371C271BCF4C3900F33A40 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9371C241BCF4C3900F33A40 /* MTDetailViewController.m */; };
 		A9371C281BCF4C3900F33A40 /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9371C251BCF4C3900F33A40 /* MTDetailViewController.xib */; };
+		A93D7BA01CD7507000DFBADF /* MTSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93D7B9F1CD7507000DFBADF /* MTSetUpViewController.m */; };
 		A947DF451BD5D3FD00BAAA90 /* MTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A947DF431BD5D3FD00BAAA90 /* MTMapViewController.m */; };
 		A947DF461BD5D3FD00BAAA90 /* MTMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A947DF441BD5D3FD00BAAA90 /* MTMapViewController.xib */; };
 		A9A6121E1BCC8DFB003284A2 /* MTDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A6121D1BCC8DFB003284A2 /* MTDeal.m */; };
@@ -137,6 +138,8 @@
 		A9371C231BCF4C3900F33A40 /* MTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
 		A9371C241BCF4C3900F33A40 /* MTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
 		A9371C251BCF4C3900F33A40 /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
+		A93D7B9E1CD7507000DFBADF /* MTSetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSetUpViewController.h; sourceTree = "<group>"; };
+		A93D7B9F1CD7507000DFBADF /* MTSetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSetUpViewController.m; sourceTree = "<group>"; };
 		A947DF421BD5D3FD00BAAA90 /* MTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapViewController.h; sourceTree = "<group>"; };
 		A947DF431BD5D3FD00BAAA90 /* MTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMapViewController.m; sourceTree = "<group>"; };
 		A947DF441BD5D3FD00BAAA90 /* MTMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMapViewController.xib; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				A9BAE6701BC8E24500649A2D /* MTCityViewController.xib */,
 				A9BAE67C1BC90B6400649A2D /* MTCitySearchResultViewController.h */,
 				A9BAE67D1BC90B6400649A2D /* MTCitySearchResultViewController.m */,
+				A93D7B9E1CD7507000DFBADF /* MTSetUpViewController.h */,
+				A93D7B9F1CD7507000DFBADF /* MTSetUpViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1004,6 +1009,7 @@
 				A9E491B61BCCB2A20007C841 /* MJRefreshFooterView.m in Sources */,
 				A9E491901BCC98E90007C841 /* SDImageCache.m in Sources */,
 				A9BAE65C1BC89F1000649A2D /* MJTypeEncoding.m in Sources */,
+				A93D7BA01CD7507000DFBADF /* MTSetUpViewController.m in Sources */,
 				A9E491D81BCCF9670007C841 /* MTDealsViewController.m in Sources */,
 				A947DF451BD5D3FD00BAAA90 /* MTMapViewController.m in Sources */,
 				A9E491B51BCCB2A20007C841 /* MJRefreshConst.m in Sources */,

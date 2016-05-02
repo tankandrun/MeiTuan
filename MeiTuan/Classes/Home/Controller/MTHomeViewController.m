@@ -32,6 +32,9 @@
 #import "MTCollectViewController.h"
 #import "MTRecentViewController.h"
 #import "MTMapViewController.h"
+#import "MTCityViewController.h"
+#import "MTSetUpViewController.h"
+
 @interface MTHomeViewController ()<AwesomeMenuDelegate>
 /** 分类item */
 @property (nonatomic,weak)UIBarButtonItem *categoryItem;
@@ -56,6 +59,8 @@
 /** 排序popover */
 @property (nonatomic,strong)UIPopoverController *sortPopover;
 
+@property (nonatomic,strong)AwesomeMenu *menu;
+
 @end
 
 @implementation MTHomeViewController
@@ -67,6 +72,11 @@
     [self setupLeftNav];
     [self setupRightNav];
     
+    MTCityViewController *city = [[MTCityViewController alloc]init];
+    MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:city];
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
+
     //创建awesomemenu
     [self setupAwesomeMenu];
 }
@@ -77,6 +87,8 @@
 - (void)viewWillAppear:(BOOL)animated {//保证前面控制器不受地图控制器干扰
     [super viewWillAppear:animated];
     [self setNotification];
+    self.menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mainMine_normal"];
+
 }
 - (void)setNotification {
     //监听分类改变
@@ -92,14 +104,15 @@
     //1.中间的Item
     AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"icon_pathMenu_background_normal"] highlightedImage:[UIImage imageNamed:@"icon_pathMenu_background_highlighted"] ContentImage:[UIImage imageNamed:@"icon_pathMenu_mainMine_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_mainMine_highlighted"]];
     //2.周边的Item
-    AwesomeMenuItem *item0 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_highlighted"]];
+//    AwesomeMenuItem *item0 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_mine_highlighted"]];
     AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_collect_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_collect_highlighted"]];
     AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_scan_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_scan_highlighted"]];
     AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"bg_pathMenu_black_normal"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"icon_pathMenu_more_normal"] highlightedContentImage:[UIImage imageNamed:@"icon_pathMenu_more_highlighted"]];
     
-    NSArray *items = @[item0,item1,item2,item3];
+    NSArray *items = @[item1,item2,item3];
     CGRect menuF = CGRectMake(0, 0, 200, 200);
     AwesomeMenu *menu = [[AwesomeMenu alloc]initWithFrame:menuF startItem:startItem optionMenus:items];
+    self.menu = menu;
     //设置代理
     menu.delegate = self;
     //不要旋转
@@ -127,23 +140,28 @@
 - (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
     //替换菜单图片
     switch (idx) {
+//        case 0:
+//            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mine_normal"];
+//            break;
         case 0:
-            menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_mine_normal"];
-            break;
-        case 1:{//收藏
+        {//收藏
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_collect_normal"];
             MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTCollectViewController alloc]init]];
             [self presentViewController:nav animated:YES completion:nil];
             break;
         }
-        case 2:{//最近浏览
+        case 1:
+        {//最近浏览
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_scan_normal"];
             MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTRecentViewController alloc]init]];
             [self presentViewController:nav animated:YES completion:nil];
             break;
         }
-        case 3:{//更多
+        case 2:
+        {//更多
             menu.contentImage = [UIImage imageNamed:@"icon_pathMenu_more_normal"];
+            MTNavigationController *nav = [[MTNavigationController alloc]initWithRootViewController:[[MTSetUpViewController alloc]init]];
+            [self presentViewController:nav animated:YES completion:nil];
             break;
         }
         default:
